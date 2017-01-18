@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>student_head</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 750px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>NO DUE FORM</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Home</a></li>
+        <li><a href="/logout">Log Out</a></li>
+        
+      </ul><br>
+      
+    </div>
+
+
+<div class="col-sm-9">
+<div class="container">
+  <h2></h2>
+  <p>Here you can check your details</p>            
+  <br><br>
+  <table class="table table-bordered">
+    <thead>
+      
+    </thead>
+    <tbody>
+      <tr>
+        <td>name</td>
+        <td>{{asa[0]}}</td>
+        
+      </tr>
+      <tr>
+        <td>Roll No</td>
+        <td>{{asa[1]}}</td>
+        
+      </tr>
+      <tr>
+        <td> Programme</td>
+        <td>{{asa[3]}}</td>
+        
+      </tr>
+      <tr>
+        <td> Department</td>
+        <td>{{asa[4]}} </td>
+        
+      </tr>
+      <tr>
+        <td>Webmail	</td>
+        <td>{{asa[2]}}</td>
+      </tr>
+   </tbody>
+   
+  </table>
+  <div class="checkbox">
+      <label><input type="checkbox">  I agree that my above details are correct.</label>
+    </div>
+    <form action="/login/submit" method="POST">
+    	<input type="submit" value="SUBMIT"/>
+    </form>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+
